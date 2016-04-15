@@ -17,10 +17,10 @@ public class VertxServer extends AbstractVerticle{
 	        
 		HttpServer server = vertx.createHttpServer();
 		Router router = Router.router(vertx);
-		router.get("/services/new_users/:id").handler(this::handleUsers);
-		router.get("/services/users/:id").handler(new UserLoader());
+		//router.get("/services/new_users/:id").handler(this::handleUsers);
+		//router.get("/services/users/:id").handler(new UserLoader());
 		
-		server.requestHandler(router::accept).listen(8080);
+	//	server.requestHandler(router::accept).listen(8080);
 		System.out.println("VertxServer started!");
 		startFuture.complete();
 	        
